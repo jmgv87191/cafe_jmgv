@@ -1,0 +1,149 @@
+:root{
+    --background-color: rgb(255, 245, 234);
+    --color-principal: rgb(170, 141, 107);
+}
+
+.header{
+    width: 100%;
+    display: grid;
+
+    grid-template-columns: 1fr 4fr 1fr;
+    background-color: var(--background-color);
+    padding: 20px 0;
+
+}
+
+/* header soporte */
+
+.header__soporte{
+    display: flex;
+    font-size: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__soporte i{
+    margin-left: 10px;
+}
+
+.header__soporte--contenedorTexto{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+
+/* ! header soporte */
+
+/* Header titulo */
+
+    .header__titulo{
+        display: flex;
+        font-size: 35px;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 5px;
+        font-weight: 600;
+    }
+
+    .header__titulo--texto{
+        margin-left: 10px;
+    }
+
+/* !Header titulo */
+
+/* Header icons */
+
+.header__icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__icons--contenedor{
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+}
+
+.header__icons--contenedor>i{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    color: var(--color-principal);
+}
+
+.header__icons--contenedor>i:first-child{
+
+    border-right: 1px solid rgb(180, 180, 180);
+
+}
+
+.header__icons--texto{
+    font-size: 10px;
+}
+
+/* !Header icons */
+
+
+@media (max-width:800px) {
+
+    .header{
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+
+
+    .header__soporte{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .header__soporte i{
+        margin: 0;
+    }
+
+    .header__icons{
+        flex-direction: column;
+        gap: 5px;
+    }
+
+}
+
+@media (max-width:576px) {
+
+    
+    .header{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    .header__soporte{
+        font-size: 8px;
+        text-align: center;
+    }
+
+    .header__titulo{
+        font-size: 25px;
+        letter-spacing: normal;
+        font-weight: 400;
+    }
+
+    .header__titulo i{
+        display: none;
+    }
+
+    
+    .header__icons{
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .header__icons--contenedor{
+        width: 70%;
+    }
+
+}
